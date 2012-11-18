@@ -85,7 +85,6 @@ input[type="color"],
   font-size: $baseFontSize;
   line-height: $baseLineHeight;
   color: $gray;
-  @include border-radius($inputBorderRadius);
 }
 
 // Reset appearance properties for textual inputs and textarea
