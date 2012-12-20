@@ -23,19 +23,12 @@
   min-height: $navbarHeight;
   padding-left:  20px;
   padding-right: 20px;
-  @include gradient-vertical($navbarBackgroundHighlight, $navbarBackground);
+  @include gradient-vertical($navbarBackground, $navbarBackground);
   border: 1px solid $navbarBorder;
-  @include border-radius(4px);
   @include box-shadow(#{0 1px 4px rgba(0,0,0,.065)});
 
   // Prevent floats from breaking the navbar
   @include clearfix();
-}
-
-// Set width to auto for default container
-// We then reset it for fixed navbars in the #gridSystem mixin
-.navbar .container {
-  width: auto;
 }
 
 // Override the default collapsed state
@@ -237,6 +230,7 @@
 // Links
 .navbar .nav > li > a {
   float: none;
+  font-weight: bold;
   // Vertically center the text given $navbarHeight
   padding: (($navbarHeight - $baseLineHeight) / 2) 15px (($navbarHeight - $baseLineHeight) / 2);
   color: $navbarLinkColor;
